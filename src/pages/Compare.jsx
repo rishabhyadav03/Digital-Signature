@@ -9,7 +9,7 @@ function toHex(bytes) {
 function hashMsg(msg) { return sha256(new TextEncoder().encode(msg)); }
 
 export default function Compare() {
-  const [message, setMessage] = useState("Hello, IIT Roorkee!");
+  const [message, setMessage] = useState("Hello!");
   const [results, setResults] = useState(null);
   const [running, setRunning] = useState(false);
 
