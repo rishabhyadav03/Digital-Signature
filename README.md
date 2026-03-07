@@ -2,7 +2,7 @@
 
 A live, interactive demonstration of **ECDSA** and **EdDSA** digital signature algorithms running entirely in the browser — no backend, no server.
 
-🔗 **Live Demo:** [digital-signature-demo.eight.vercel.app](https://digital-signature-demo.eight.vercel.app)
+🔗 **Live Demo:** [digital-signature-demo-eight.vercel.app](https://digital-signature-demo-eight.vercel.app)
 
 ## What It Does
 
