@@ -1,16 +1,37 @@
-# React + Vite
+# Digital Signature Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A live, interactive demonstration of **ECDSA** and **EdDSA** digital signature algorithms running entirely in the browser — no backend, no server.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [digital-signature-demo.eight.vercel.app](https://digital-signature-demo.eight.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What It Does
 
-## React Compiler
+- **ECDSA (secp256k1)** — Generate key pairs, sign messages, verify signatures, and demonstrate tamper detection using the same curve as Bitcoin and Ethereum
+- **EdDSA (Ed25519)** — Same flow using Solana's native signature algorithm — deterministic, faster, and safer than ECDSA
+- **Live Benchmark** — Run both algorithms on the same message and compare key sizes, signature sizes, sign/verify timing, and security properties side by side
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
 
-## Expanding the ESLint configuration
+- Real cryptography in the browser using `@noble/curves` v2
+- Private keys never leave your device
+- Tamper detection — modifying even one character invalidates the signature
+- Side-by-side comparison of ECDSA vs EdDSA
+- Terminal-style dark UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| React + Vite | Frontend framework |
+| Tailwind CSS | Styling |
+| @noble/curves v2 | ECDSA (secp256k1) + EdDSA (Ed25519) |
+| @noble/hashes v2 | SHA256 hashing |
+| Web Crypto API | Browser-native SHA256 |
+
+## How to Run Locally
+```bash
+git clone https://github.com/rishabhyadav03/Digital-Signature.git
+cd Digital-Signature
+npm install
+npm run dev
+```
